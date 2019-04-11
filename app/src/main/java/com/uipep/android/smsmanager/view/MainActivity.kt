@@ -13,13 +13,10 @@ import com.google.android.gms.auth.api.credentials.CredentialPickerConfig
 import com.google.android.gms.auth.api.credentials.HintRequest
 import com.google.android.gms.common.api.GoogleApiClient
 import com.google.android.gms.auth.api.phone.SmsRetriever
-import com.uipep.android.smsmanager.AppSignatureHelper
-import com.uipep.android.smsmanager.MySMSBroadcastReceiver
-import com.uipep.android.smsmanager.MySMSManager
-import com.uipep.android.smsmanager.R
+import com.uipep.android.smsmanager.*
 
 
-class MainActivity : AppCompatActivity(), MySMSManager.MySMSListener {
+class MainActivity : AppCompatActivity(), MySMSListener {
 
     var TAG = javaClass.simpleName
 

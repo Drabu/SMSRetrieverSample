@@ -15,9 +15,9 @@ class MySMSBroadcastReceiver : BroadcastReceiver() {
 
     companion object {
 
-        var mySMSManager : MySMSManager.MySMSListener? = null
+        var mySMSManager : MySMSListener? = null
 
-        fun bindListener(mySMSManager : MySMSManager.MySMSListener) {
+        fun bindListener(mySMSManager : MySMSListener) {
             this.mySMSManager =  mySMSManager
         }
 
@@ -29,7 +29,6 @@ class MySMSBroadcastReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
         if (SmsRetriever.SMS_RETRIEVED_ACTION == intent.action) {
-            Toast.makeText(context, "inside OnRecieve", Toast.LENGTH_LONG).show()
             val extras = intent.extras
             val status = extras!!.get(SmsRetriever.EXTRA_STATUS) as Status
 
